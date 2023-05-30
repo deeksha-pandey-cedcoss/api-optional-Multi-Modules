@@ -1,0 +1,18 @@
+<a href="/product/add/" class="btn btn-info m-3">Add Movies!</a>
+<a href="/product/index/" class="btn btn-info m-3">Display Movies!</a>
+
+
+<?php
+echo "<div class='row'>";
+foreach ($data as $value) {
+    echo "<div class='card ' style='width: 18rem;'>
+<div class='card-body'>
+  <h5 class='card-title'>Name : $value->name</h5>
+  <h6 class='card-subtitle mb-2 text-muted'>Type :  $value->type</h6>
+  <a href='/product/edit/?id=$value->id' class='card-link'>Edit</a>
+  <a href='/product/delete/?id=$value->id' class='card-link'>Delete</a>
+</div>
+</div>";
+}
+echo "</div>";
+?>
